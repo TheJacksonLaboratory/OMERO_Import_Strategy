@@ -1,0 +1,232 @@
+[2023-06-28 16:19:10,911->IMPORT_TO_OMERO.py-><module>():188]INFO: Logger has been created
+[2023-06-28 16:19:10,911->IMPORT_TO_OMERO.py->main():155]INFO: 
+[2023-06-28 16:19:11,515->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:19:11,516->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:19:11,516->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:20:32,300->IMPORT_TO_OMERO.py-><module>():188]INFO: Logger has been created
+[2023-06-28 16:20:32,300->IMPORT_TO_OMERO.py->main():155]INFO: 
+[2023-06-28 16:20:32,969->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:20:32,970->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:20:32,971->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:20:52,810->IMPORT_TO_OMERO.py-><module>():188]INFO: Logger has been created
+[2023-06-28 16:20:52,811->IMPORT_TO_OMERO.py->main():155]INFO: 
+[2023-06-28 16:21:01,666->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:21:06,170->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:21:08,696->IMPORT_TO_OMERO.py->process():148]ERROR: Not a directory
+[2023-06-28 16:21:50,569->IMPORT_TO_OMERO.py-><module>():189]INFO: Logger has been created
+[2023-06-28 16:21:50,569->IMPORT_TO_OMERO.py->main():156]INFO: 
+[2023-06-28 16:22:20,157->IMPORT_TO_OMERO.py-><module>():189]INFO: Logger has been created
+[2023-06-28 16:22:20,157->IMPORT_TO_OMERO.py->main():156]INFO: 
+[2023-06-28 16:22:26,605->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:22:27,385->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD1 08-17-18.699 06-21-23-1.tif
+[2023-06-28 16:22:27,385->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:27,486->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD 08-07-44.366 06-21-23-1.tif
+[2023-06-28 16:22:27,486->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:22:27,577->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD1 08-08-03.632 06-21-23-1.tif
+[2023-06-28 16:22:27,577->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:22:27,669->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS 07-45-51.758 06-21-23-1.tif
+[2023-06-28 16:22:27,669->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:27,762->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS1 08-23-31.526 06-21-23-1.tif
+[2023-06-28 16:22:27,762->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:27,861->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD 08-17-02.382 06-21-23-1.tif
+[2023-06-28 16:22:27,861->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:27,956->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS1 07-46-49.385 06-21-23-1.tif
+[2023-06-28 16:22:27,957->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:28,049->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS2 07-47-09.930 06-21-23-1.tif
+[2023-06-28 16:22:28,049->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:28,145->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD1 07-54-18.964 06-21-23-1.tif
+[2023-06-28 16:22:28,145->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:22:28,239->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS 08-22-50.092 06-21-23-1.tif
+[2023-06-28 16:22:28,240->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:28,345->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD 07-53-55.143 06-21-23-1.tif
+[2023-06-28 16:22:28,346->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:22:28,439->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS2 08-23-49.123 06-21-23-1.tif
+[2023-06-28 16:22:28,440->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:28,539->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD2 08-08-40.464 06-21-23-1.tif
+[2023-06-28 16:22:28,539->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:22:28,630->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD1 08-01-31.290 06-21-23-1.tif
+[2023-06-28 16:22:28,630->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:22:28,724->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD 08-01-12.788 06-21-23-1.tif
+[2023-06-28 16:22:28,725->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:22:28,869->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230621xlsx
+[2023-06-28 16:22:57,268->IMPORT_TO_OMERO.py-><module>():189]INFO: Logger has been created
+[2023-06-28 16:22:57,268->IMPORT_TO_OMERO.py->main():156]INFO: 
+[2023-06-28 16:22:58,287->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:22:58,966->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD1 08-17-18.699 06-21-23-1.tif
+[2023-06-28 16:22:58,966->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:59,072->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD 08-07-44.366 06-21-23-1.tif
+[2023-06-28 16:22:59,072->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:22:59,165->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD1 08-08-03.632 06-21-23-1.tif
+[2023-06-28 16:22:59,166->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:22:59,266->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS 07-45-51.758 06-21-23-1.tif
+[2023-06-28 16:22:59,266->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:59,357->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS1 08-23-31.526 06-21-23-1.tif
+[2023-06-28 16:22:59,357->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:59,448->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD 08-17-02.382 06-21-23-1.tif
+[2023-06-28 16:22:59,448->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:59,540->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS1 07-46-49.385 06-21-23-1.tif
+[2023-06-28 16:22:59,540->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:59,633->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS2 07-47-09.930 06-21-23-1.tif
+[2023-06-28 16:22:59,634->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:22:59,727->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD1 07-54-18.964 06-21-23-1.tif
+[2023-06-28 16:22:59,727->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:22:59,821->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS 08-22-50.092 06-21-23-1.tif
+[2023-06-28 16:22:59,821->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:22:59,916->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD 07-53-55.143 06-21-23-1.tif
+[2023-06-28 16:22:59,916->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:23:00,019->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS2 08-23-49.123 06-21-23-1.tif
+[2023-06-28 16:23:00,019->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:00,116->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD2 08-08-40.464 06-21-23-1.tif
+[2023-06-28 16:23:00,117->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:00,209->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD1 08-01-31.290 06-21-23-1.tif
+[2023-06-28 16:23:00,210->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:00,302->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD 08-01-12.788 06-21-23-1.tif
+[2023-06-28 16:23:00,303->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:00,410->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230621xlsx
+[2023-06-28 16:23:30,971->IMPORT_TO_OMERO.py-><module>():189]INFO: Logger has been created
+[2023-06-28 16:23:30,971->IMPORT_TO_OMERO.py->main():156]INFO: 
+[2023-06-28 16:23:31,998->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:23:32,716->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD1 08-17-18.699 06-21-23-1.tif
+[2023-06-28 16:23:32,718->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:32,830->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD 08-07-44.366 06-21-23-1.tif
+[2023-06-28 16:23:32,830->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:32,926->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD1 08-08-03.632 06-21-23-1.tif
+[2023-06-28 16:23:32,927->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:33,026->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS 07-45-51.758 06-21-23-1.tif
+[2023-06-28 16:23:33,027->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:33,124->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS1 08-23-31.526 06-21-23-1.tif
+[2023-06-28 16:23:33,125->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:33,217->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD 08-17-02.382 06-21-23-1.tif
+[2023-06-28 16:23:33,218->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:33,312->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS1 07-46-49.385 06-21-23-1.tif
+[2023-06-28 16:23:33,312->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:33,414->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS2 07-47-09.930 06-21-23-1.tif
+[2023-06-28 16:23:33,415->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:33,511->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD1 07-54-18.964 06-21-23-1.tif
+[2023-06-28 16:23:33,511->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:23:33,602->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS 08-22-50.092 06-21-23-1.tif
+[2023-06-28 16:23:33,603->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:33,699->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD 07-53-55.143 06-21-23-1.tif
+[2023-06-28 16:23:33,699->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:23:33,793->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS2 08-23-49.123 06-21-23-1.tif
+[2023-06-28 16:23:33,794->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:33,888->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD2 08-08-40.464 06-21-23-1.tif
+[2023-06-28 16:23:33,889->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:33,985->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD1 08-01-31.290 06-21-23-1.tif
+[2023-06-28 16:23:33,986->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:34,081->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD 08-01-12.788 06-21-23-1.tif
+[2023-06-28 16:23:34,082->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:34,222->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230621xlsx
+[2023-06-28 16:23:52,762->IMPORT_TO_OMERO.py-><module>():189]INFO: Logger has been created
+[2023-06-28 16:23:52,762->IMPORT_TO_OMERO.py->main():156]INFO: 
+[2023-06-28 16:23:53,456->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:23:54,230->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD1 08-17-18.699 06-21-23-1.tif
+[2023-06-28 16:23:54,231->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:54,324->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD 08-07-44.366 06-21-23-1.tif
+[2023-06-28 16:23:54,324->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:54,416->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD1 08-08-03.632 06-21-23-1.tif
+[2023-06-28 16:23:54,417->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:54,510->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS 07-45-51.758 06-21-23-1.tif
+[2023-06-28 16:23:54,510->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:54,613->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS1 08-23-31.526 06-21-23-1.tif
+[2023-06-28 16:23:54,614->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:54,708->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OD 08-17-02.382 06-21-23-1.tif
+[2023-06-28 16:23:54,709->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:54,802->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS1 07-46-49.385 06-21-23-1.tif
+[2023-06-28 16:23:54,803->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:54,904->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14285_OS2 07-47-09.930 06-21-23-1.tif
+[2023-06-28 16:23:54,904->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:23:55,005->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD1 07-54-18.964 06-21-23-1.tif
+[2023-06-28 16:23:55,006->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:23:55,106->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS 08-22-50.092 06-21-23-1.tif
+[2023-06-28 16:23:55,106->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:55,200->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-14289_OD 07-53-55.143 06-21-23-1.tif
+[2023-06-28 16:23:55,200->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:23:55,295->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13671_OS2 08-23-49.123 06-21-23-1.tif
+[2023-06-28 16:23:55,296->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:23:55,390->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13723_OD2 08-08-40.464 06-21-23-1.tif
+[2023-06-28 16:23:55,391->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:23:55,485->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD1 08-01-31.290 06-21-23-1.tif
+[2023-06-28 16:23:55,486->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:55,584->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13637_OD 08-01-12.788 06-21-23-1.tif
+[2023-06-28 16:23:55,584->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:23:55,704->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230621.xlsx
+[2023-06-28 16:23:57,702->IMPORT_TO_OMERO.py->send_to():118]DEBUG: Send farraa_20230621.xlsx to /Volumes/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero/farraa_20230621
+[2023-06-28 16:24:00,295->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:24:00,971->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13618_OD 08-23-53.006 06-07-23-1.tif
+[2023-06-28 16:24:00,972->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13618
+[2023-06-28 16:24:01,074->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12625_OS1 08-41-46.059 06-07-23-1.tif
+[2023-06-28 16:24:01,075->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12625
+[2023-06-28 16:24:01,169->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13618_OS1 08-26-52.330 06-07-23-1.tif
+[2023-06-28 16:24:01,170->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13618
+[2023-06-28 16:24:01,264->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13618_OS 08-26-34.545 06-07-23-1.tif
+[2023-06-28 16:24:01,264->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13618
+[2023-06-28 16:24:01,357->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12625_OS 08-41-08.447 06-07-23-1.tif
+[2023-06-28 16:24:01,357->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12625
+[2023-06-28 16:24:01,453->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12740_OD1 08-33-47.058 06-07-23-1.tif
+[2023-06-28 16:24:01,453->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12740
+[2023-06-28 16:24:01,547->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12651_OD1 10-34-44.921 06-07-23-1.tif
+[2023-06-28 16:24:01,547->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12651
+[2023-06-28 16:24:01,643->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12658_OS 10-24-57.619 06-07-23-1.tif
+[2023-06-28 16:24:01,643->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12658
+[2023-06-28 16:24:01,737->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12651_OD 10-34-27.137 06-07-23-1.tif
+[2023-06-28 16:24:01,738->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12651
+[2023-06-28 16:24:01,833->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-12740_OD 08-33-09.774 06-07-23-1.tif
+[2023-06-28 16:24:01,833->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-12740
+[2023-06-28 16:24:01,941->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230607.xlsx
+[2023-06-28 16:24:01,964->IMPORT_TO_OMERO.py->send_to():118]DEBUG: Send farraa_20230607.xlsx to /Volumes/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero/farraa_20230607
+[2023-06-28 16:24:03,757->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():19]INFO: Connecting to database
+[2023-06-28 16:24:04,458->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13787_OS 07-52-26.948 06-14-23-1.tif
+[2023-06-28 16:24:04,458->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13787
+[2023-06-28 16:24:04,565->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13786_OS 07-43-56.435 06-14-23-1.tif
+[2023-06-28 16:24:04,565->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13786
+[2023-06-28 16:24:04,659->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13474_OD 08-11-00.982 06-14-23-1.tif
+[2023-06-28 16:24:04,660->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13474
+[2023-06-28 16:24:04,754->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13786_OS1 07-44-42.377 06-14-23-1.tif
+[2023-06-28 16:24:04,754->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13786
+[2023-06-28 16:24:04,850->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13474_OD1 08-11-21.481 06-14-23-1.tif
+[2023-06-28 16:24:04,850->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13474
+[2023-06-28 16:24:04,941->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13256_OD 08-02-25.727 06-14-23-1.tif
+[2023-06-28 16:24:04,942->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13256
+[2023-06-28 16:24:05,037->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():51]INFO: Process file fundus2_A-13474_OS 08-13-47.232 06-14-23-1.tif
+[2023-06-28 16:24:05,038->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():53]DEBUG: Get metadata of image associated with animal A-13474
+[2023-06-28 16:24:05,158->IMPORT_TO_OMERO.py->generate_submission_form():101]DEBUG: Generating form farraa_20230614.xlsx
+[2023-06-28 16:24:05,190->IMPORT_TO_OMERO.py->send_to():118]DEBUG: Send farraa_20230614.xlsx to /Volumes/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero/farraa_20230614
+[2023-06-28 16:45:23,682->IMPORT_TO_OMERO.py-><module>():195]INFO: Logger has been created
+[2023-06-28 16:45:23,682->IMPORT_TO_OMERO.py->main():160]INFO: Start importing to OMERO
+[2023-06-28 16:45:24,622->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():20]INFO: Connecting to database
+[2023-06-28 16:45:25,421->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13671_OD1 08-17-18.699 06-21-23-1.tif
+[2023-06-28 16:45:25,422->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:45:25,537->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13723_OD 08-07-44.366 06-21-23-1.tif
+[2023-06-28 16:45:25,538->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:45:25,634->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13723_OD1 08-08-03.632 06-21-23-1.tif
+[2023-06-28 16:45:25,634->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:45:25,727->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-14285_OS 07-45-51.758 06-21-23-1.tif
+[2023-06-28 16:45:25,728->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:45:25,824->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13671_OS1 08-23-31.526 06-21-23-1.tif
+[2023-06-28 16:45:25,825->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:45:25,919->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13671_OD 08-17-02.382 06-21-23-1.tif
+[2023-06-28 16:45:25,919->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:45:26,011->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-14285_OS1 07-46-49.385 06-21-23-1.tif
+[2023-06-28 16:45:26,011->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:45:26,109->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-14285_OS2 07-47-09.930 06-21-23-1.tif
+[2023-06-28 16:45:26,110->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-14285
+[2023-06-28 16:45:26,204->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-14289_OD1 07-54-18.964 06-21-23-1.tif
+[2023-06-28 16:45:26,204->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:45:26,296->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13671_OS 08-22-50.092 06-21-23-1.tif
+[2023-06-28 16:45:26,297->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:45:26,391->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-14289_OD 07-53-55.143 06-21-23-1.tif
+[2023-06-28 16:45:26,392->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-14289
+[2023-06-28 16:45:26,489->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13671_OS2 08-23-49.123 06-21-23-1.tif
+[2023-06-28 16:45:26,489->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13671
+[2023-06-28 16:45:26,584->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13723_OD2 08-08-40.464 06-21-23-1.tif
+[2023-06-28 16:45:26,584->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13723
+[2023-06-28 16:45:26,677->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13637_OD1 08-01-31.290 06-21-23-1.tif
+[2023-06-28 16:45:26,678->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:45:26,770->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file farraa_20230621.xlsx
+[2023-06-28 16:45:26,771->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal 20230621.xlsx
+[2023-06-28 16:45:26,855->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():52]INFO: Process file fundus2_A-13637_OD 08-01-12.788 06-21-23-1.tif
+[2023-06-28 16:45:26,856->IMPORT_TO_OMERO.py->GET_IMAGE_INFO():54]DEBUG: Get metadata of image associated with animal A-13637
+[2023-06-28 16:45:27,006->IMPORT_TO_OMERO.py->generate_submission_form():102]DEBUG: Generating form farraa_20230621.xlsx
+[2023-06-28 16:45:29,151->IMPORT_TO_OMERO.py->send_to():119]DEBUG: Send farraa_20230621.xlsx to /Volumes/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero/farraa_20230621
+[2023-06-28 16:45:31,732->IMPORT_TO_OMERO.py->process():149]DEBUG: Drop folder /Volumes/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero/farraa_20230621 to OMERO Dropbox
