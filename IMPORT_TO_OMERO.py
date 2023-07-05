@@ -1,3 +1,4 @@
+import errno
 import logging
 import os
 import shutil
@@ -8,13 +9,14 @@ import mysql.connector
 import pandas as pd
 
 
-def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]):
+def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     """
 
-    :param FILE_TO_BE_IMPORTED:
+    :param: FILE_TO_BE_IMPORTED: Files in the OMERO import folder,
+            i.e. //bht2stor.jax.org/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero
     :type FILE_TO_BE_IMPORTED:
-    :return:
-    :rtype:
+    :return: Metadata of images
+    :rtype: pd.DataFrame
     """
 
     logger.info("Connecting to database")
@@ -53,7 +55,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]):
                         INNER JOIN
                     DateCompleteMap USING (_ProcedureInstance_key)
                 WHERE 
-                    ProcedureAlias = 'Eye Morphology'
+                    ProcedureAlias = '{}'
                 AND 
                     OrganismID = '{}';"""
 
@@ -63,21 +65,38 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]):
         logger.info(f"Process file {f}")
         organism_id = f.split("_")[1]
 
-        def get_eye():
+        def get_eye() -> str:
+            """
+            Function to get eye of the image from file name
+            :return: Animal ID of the mouse
+            :rtype: String
+            """
             return f.split("_")[2].split(" ")[0]
 
         eye = Eyes[get_eye()]
+
+        def get_test() -> str:
+            """
+            Function to get experiment name from file name
+            :return: Experiment name of the image
+            :rtype: String
+            """
+            return f.split("_")[0]
+
+        test = TEST[get_test()]
+
         EYE_INFO.append(eye)
         logger.debug(f"Get metadata of image associated with animal {organism_id}")
-        cursor.execute(stmt.format(organism_id))
+        cursor.execute(stmt.format(test, organism_id))
         record = cursor.fetchall()
-        if record: DB_RECORDS.append(record[0])
+        if record:
+            DB_RECORDS.append(record[0])
 
     cursor.close()
     conn.close()
 
     # print(DB_RECORDS)
-    EYE_INFO = pd.DataFrame(EYE_INFO)
+    EYE_INFO = pd.DataFrame(EYE_INFO, columns=["Eye"])
     IMG_METADTA = pd.DataFrame(DB_RECORDS)
     IMG_FILE_NAME = pd.DataFrame({'Filename': FILE_TO_BE_IMPORTED})
     # print(IMG_METADTA)
@@ -98,18 +117,18 @@ def generate_submission_form(IMG_INFO: pd.DataFrame,
                              filename: str,
                              PARENT_DIR: str) -> None:
     """
-
-    :param IMG_INFO:
-    :type IMG_INFO:
-    :param username:
-    :type username:
-    :param wkgroup:
-    :type wkgroup:
-    :param filename:
-    :type filename:
-    :param PARENT_DIR:
-    :type PARENT_DIR:
-    :return:
+    Function to create the submission form for omero import
+    :param IMG_INFO:Metadata to be inserted into excel spreadsheet
+    :type IMG_INFO: pd.DataFrame
+    :param username: Username of OMERO
+    :type username: String
+    :param wkgroup: Work group of OMERO
+    :type wkgroup: String
+    :param filename: Name of generated excel file
+    :type filename: String
+    :param PARENT_DIR: Directory to put the generated submission form
+    :type PARENT_DIR: String
+    :return: None
     :rtype:
     """
     credentials = {"OMERO user:": username, "OMERO group:": wkgroup}
@@ -165,7 +184,27 @@ def process(FROM: str,
                                      PARENT_DIR=SUB_DIR)
 
             logger.debug(f"Drop folder {SUB_DIR} to OMERO Dropbox")
-            shutil.copy(SUB_DIR, TO)
+            #shutil.copy(SUB_DIR, TO)
+
+            def copyanything(src, dst):
+                """
+                Function to copy and paste a folder
+                :param src: Directory to move
+                :type src: String
+                :param dst: Directory to move to
+                :type dst: String
+                :return: None
+                :rtype: None
+                """
+                try:
+                    shutil.copytree(src, dst)
+                except OSError as exc:
+                    if exc.errno in (errno.ENOTDIR, errno.EINVAL):
+                        shutil.copy(src, dst)
+                else:
+                    raise
+
+            copyanything(src=SUB_DIR, dst=TO)
 
         else:
             logger.error("Not a directory")
@@ -216,6 +255,12 @@ if __name__ == "__main__":
         "OD": "Right eye",
         "OS": "Left Eye",
         "OU": "Both"
+    }
+
+    TEST = {
+        "fundus2": "Eye Morphology",
+        "path": "Gross Pathology",
+        "fundus": "ERG"
     }
 
     main()
