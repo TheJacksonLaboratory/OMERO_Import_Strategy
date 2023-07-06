@@ -11,7 +11,7 @@ import pandas as pd
 
 def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     """
-
+    Function to get metadata of an image from database
     :param: FILE_TO_BE_IMPORTED: Files in the OMERO import folder,
             i.e. //bht2stor.jax.org/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero
     :type FILE_TO_BE_IMPORTED:
@@ -89,8 +89,22 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
         logger.debug(f"Get metadata of image associated with animal {organism_id}")
         cursor.execute(stmt.format(test, organism_id))
         record = cursor.fetchall()
+
         if record:
-            DB_RECORDS.append(record[0])
+            def to_lower_case(dict_: dict) -> dict:
+                """
+                :param dict_: Record of table in database
+                :type dict_: dict
+                :return: DB record with keys in all lower case
+                :rtype: dict
+                """
+                if not dict_:
+                    return {}
+
+                return {k.lower(): v for k, v in dict_.items()}
+
+            DB_RECORDS.append(to_lower_case(record[0]))
+            #DB_RECORDS.append(record[0])
 
     cursor.close()
     conn.close()
@@ -98,7 +112,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     # print(DB_RECORDS)
     EYE_INFO = pd.DataFrame(EYE_INFO, columns=["Eye"])
     IMG_METADTA = pd.DataFrame(DB_RECORDS)
-    IMG_FILE_NAME = pd.DataFrame({'Filename': FILE_TO_BE_IMPORTED})
+    IMG_FILE_NAME = pd.DataFrame({'filename': FILE_TO_BE_IMPORTED})
     # print(IMG_METADTA)
     # print(IMG_FILE_NAME)
 
@@ -221,7 +235,7 @@ def main():
 
 
 if __name__ == "__main__":
-    username = "xxxxx"
+    username = "chent"
     wkgroup = "default"
     submission_form = "OMERO_submission_form.xlsx"
 
