@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 import requests
 from requests import exceptions
-import mysql.connector
+import mysql.connector as mysql
 import pandas as pd
 
 
@@ -74,7 +74,7 @@ def log_in(username: str, password: str) -> None:
     assert login_rsp['success']
 
 
-def GET_DOWNLOAD_URLS() -> list[str]:
+def GET_DOWNLOAD_URLS() -> pd.DataFrame:
     pass
 
 
@@ -89,7 +89,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     """
 
     logger.info("Connecting to database")
-    conn = mysql.connector.connect(host=db_server, user=db_username, password=db_password, database=db_name)
+    conn = mysql.connect(host=db_server, user=db_username, password=db_password, database=db_name)
     cursor = conn.cursor(buffered=True, dictionary=True)
     cursor.execute("SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED")
     stmt = """ SELECT
@@ -138,12 +138,14 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
 
 def main():
     FROM = "//bht2stor.jax.org/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero"
+    files = os.listdir(FROM)
+    IMG_INFO = GET_IMAGE_INFO(FILE_TO_BE_IMPORTED=files)
+    IMG_INFO.to_csv("test.csv")
 
 
 if __name__ == "__main__":
     username = "chent"
-    wkgroup = "default"
-    submission_form = "OMERO_submission_form.xlsx"
+    password = "Ql4nc,tzjzsblj!"
 
     db_server = "rslims.jax.org"
     db_username = "dba"
