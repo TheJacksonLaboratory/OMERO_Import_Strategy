@@ -7,7 +7,7 @@ import requests
 from requests import exceptions
 import mysql.connector as mysql
 import pandas as pd
-
+import utils
 
 def log_in(username: str, password: str) -> None:
     """
@@ -167,7 +167,7 @@ if __name__ == "__main__":
 
 
     job_name = 'OMERO_Import'
-    logging_dest = os.path.join(os.getcwd(), "logs")
+    logging_dest = os.path.join(os.getcwd(), "../logs")
     date = datetime.now().strftime("%B-%d-%Y")
     logging_filename = logging_dest + "/" + f'{date}.log'
     logger = createLogHandler(logging_filename)

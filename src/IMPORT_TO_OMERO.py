@@ -3,18 +3,63 @@ import logging
 import os
 import shutil
 import sys
+import time
 from datetime import datetime
-
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 import mysql.connector
 import pandas as pd
+import utils
+import requests
+import urllib
+
+
+class MonitorFolder(FileSystemEventHandler):
+    def on_created(self, event):
+        print(event.src_path, event.event_type)
+        logger.info(event.src_path + " " + event.event_type)
+
+        created_file = event.src_path
+
+        if os.path.isdir(created_file):
+            IMG_INFO = GET_IMAGE_INFO(FILE_TO_BE_IMPORTED=created_file)
+            generate_submission_form(IMG_INFO=IMG_INFO,
+                                     username=username,
+                                     wkgroup=wkgroup,
+                                     filename=created_file.split("/")[-1] + ".xlsx",
+                                     PARENT_DIR=created_file)
+
+    def on_modified(self, event):
+        print(event.src_path, event.event_type)
+        logger.info(event.src_path + " " + event.event_type)
+
+    def on_deleted(self, event):
+        print(event.src_path, event.event_type)
+        logger.info(event.src_path + " " + event.event_type)
+
+    def on_moved(self, event):
+        print(event.src_path, event.event_type)
+        logger.info(event.src_path + " " + event.event_type)
+
+
+def authenticate() -> None:
+    pass
+
+
+def get_token() -> str:
+    pass
+
+
+def transfer_files() -> None:
+    pass
 
 
 def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     """
     Function to get metadata of an image from database
-    :param: FILE_TO_BE_IMPORTED: Files in the OMERO import folder,
+    :param: FILE_TO_BE_IMPORTED: Subfolders in the OMERO import folder,
             i.e. //bht2stor.jax.org/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero
-    :type FILE_TO_BE_IMPORTED:
+    :type FILE_TO_BE_IMPORTED: list[str]
     :return: Metadata of images
     :rtype: pd.DataFrame
     """
@@ -62,6 +107,8 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
     DB_RECORDS = []
     EYE_INFO = []
     for f in FILE_TO_BE_IMPORTED:
+
+        # GET filenames from Omero import table
         logger.info(f"Process file {f}")
         organism_id = f.split("_")[1]
 
@@ -73,7 +120,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
             """
             return f.split("_")[2].split(" ")[0]
 
-        eye = Eyes[get_eye()]
+        eye = utils.Eyes[get_eye()]
 
         def get_test() -> str:
             """
@@ -83,7 +130,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
             """
             return f.split("_")[0]
 
-        test = TEST[get_test()]
+        test = utils.TEST[get_test()]
 
         EYE_INFO.append(eye)
         logger.debug(f"Get metadata of image associated with animal {organism_id}")
@@ -104,7 +151,7 @@ def GET_IMAGE_INFO(FILE_TO_BE_IMPORTED: list[str]) -> pd.DataFrame:
                 return {k.lower(): v for k, v in dict_.items()}
 
             DB_RECORDS.append(to_lower_case(record[0]))
-            #DB_RECORDS.append(record[0])
+            # DB_RECORDS.append(record[0])
 
     cursor.close()
     conn.close()
@@ -198,27 +245,6 @@ def process(FROM: str,
                                      PARENT_DIR=SUB_DIR)
 
             logger.debug(f"Drop folder {SUB_DIR} to OMERO Dropbox")
-            #shutil.copy(SUB_DIR, TO)
-
-            def copyanything(src, dst):
-                """
-                Function to copy and paste a folder
-                :param src: Directory to move
-                :type src: String
-                :param dst: Directory to move to
-                :type dst: String
-                :return: None
-                :rtype: None
-                """
-                try:
-                    shutil.copytree(src, dst)
-                except OSError as exc:
-                    if exc.errno in (errno.ENOTDIR, errno.EINVAL):
-                        shutil.copy(src, dst)
-                else:
-                    raise
-
-            copyanything(src=SUB_DIR, dst=TO)
 
         else:
             logger.error("Not a directory")
@@ -226,10 +252,25 @@ def process(FROM: str,
 
 
 def main():
-    FROM = "//bht2stor.jax.org/phenotype/OMERO/KOMP/ImagesToBeImportedIntoOmero"
-    TO = "//jax.org/jax/omero-drop/dropbox"
+    src_path = os.getcwd()
+    event_handler = MonitorFolder()
+    observer = Observer()
+    observer.schedule(event_handler, path=src_path, recursive=True)
+    logger.info("Monitoring started")
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        observer.stop()
+        observer.join()
+
+    FROM = utils.FROM
+    TO = utils.TO
+
     logger.info("Start importing to OMERO")
-    process(FROM=FROM, TO=TO)
+    # process(FROM=FROM, TO=TO)
     logger.info("Process finished")
     sys.exit()
 
@@ -239,31 +280,10 @@ if __name__ == "__main__":
     wkgroup = "default"
     submission_form = "OMERO_submission_form.xlsx"
 
-    db_server = "rslims.jax.org"
-    db_username = "dba"
-    db_password = "rsdba"
-    db_name = "rslims"
-
-    """Setup logger"""
-
-
-    def createLogHandler(log_file):
-        logger = logging.getLogger(__name__)
-        FORMAT = "[%(asctime)s->%(filename)s->%(funcName)s():%(lineno)s]%(levelname)s: %(message)s"
-        logging.basicConfig(format=FORMAT, filemode="w", level=logging.DEBUG, force=True)
-        handler = logging.FileHandler(log_file)
-        handler.setFormatter(logging.Formatter(FORMAT))
-        logger.addHandler(handler)
-
-        return logger
-
-
-    job_name = 'OMERO_Import'
-    logging_dest = os.path.join(os.getcwd(), "logs")
-    date = datetime.now().strftime("%B-%d-%Y")
-    logging_filename = logging_dest + "/" + f'{date}.log'
-    logger = createLogHandler(logging_filename)
-    logger.info('Logger has been created')
+    db_server = utils.db_server
+    db_username = utils.db_username
+    db_password = utils.db_password
+    db_name = utils.db_name
 
     Eyes = {
         "OD": "Right eye",
@@ -276,5 +296,14 @@ if __name__ == "__main__":
         "path": "Gross Pathology",
         "fundus": "ERG"
     }
+
+    """Setup logger"""
+
+    job_name = 'OMERO_Import'
+    logging_dest = os.path.join(os.getcwd(), "../logs")
+    date = datetime.now().strftime("%B-%d-%Y")
+    logging_filename = logging_dest + "/" + f'{date}.log'
+    logger = utils.createLogHandler(logging_filename)
+    logger.info('Logger has been created')
 
     main()
