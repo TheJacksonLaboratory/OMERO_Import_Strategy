@@ -13,6 +13,7 @@ import openpyxl
 
 
 class MonitorFolder(FileSystemEventHandler):
+
     def on_created(self, event):
         print(event.src_path, event.event_type)
         logger.info(event.src_path + " " + event.event_type)
@@ -28,8 +29,6 @@ class MonitorFolder(FileSystemEventHandler):
                                      wkgroup="KOMP_eye",
                                      filename=created_file.split("/")[-1] + ".xlsx",
                                      PARENT_DIR=created_file)
-
-            logger.debug(f"Drop folder {created_file} to OMERO Dropbox {TO}")
 
             def copyanything(src, dst) -> None:
                 """
@@ -48,10 +47,12 @@ class MonitorFolder(FileSystemEventHandler):
                     if exc.errno in (errno.ENOTDIR, errno.EINVAL):
                         shutil.copy(src, dst)
 
+            logger.debug(f"Drop folder {created_file} to OMERO Dropbox {TO}")
             copyanything(src=created_file,
                          dst=TO + "/" + created_file.split("\\")[-1])
 
             # send_message_on_slack()
+            insert_import_status_to_db(DIR_SENT_TO_DROPBOX=created_file)
 
         else:
             pass
@@ -219,8 +220,48 @@ def generate_submission_form(IMG_INFO: pd.DataFrame,
     os.remove(filename)
 
 
-def send_message() -> None:
-    pass
+def insert_import_status_to_db(DIR_SENT_TO_DROPBOX: str) -> None:
+    """
+
+    Parameters
+    ----------
+    DIR_SENT_TO_DROPBOX :
+
+    Returns
+    -------
+
+    """
+    db_schema = "komp"
+    conn = mysql.connector.connect(host=db_server, user=db_username, password=db_password, database=db_schema)
+    files_sent = os.listdir(DIR_SENT_TO_DROPBOX)
+    for file in files_sent:
+        row = {}
+        if file.endswith(".xlsx"):
+            logger.info(f"Adding submission form {file} to record")
+            row["SubmissionFormName"] = file
+            continue
+
+        logger.info("Add date of import to record")
+        row["DateOfImport"] = datetime.now().strftime("%B-%d-%Y")
+        logger.info(f"Adding image {file} to record")
+        row["Filename"] = file
+
+        cursor = conn.cursor()
+        placeholders = ', '.join(['%s'] * len(row))
+        columns = ', '.join(row.keys())
+        stmt = "INSERT INTO komp.OMEROImportStatus (%s) VALUES (%s);" % (columns, placeholders)
+
+        try:
+            logger.info(f"Inserting {row} to the table")
+            cursor.execute(stmt, list(row.values()))
+
+        except mysql.connector.errors as e:
+            print(e)
+            logger.error(e)
+            #send_warning_message()
+
+    conn.commit()
+    conn.close()
 
 
 def main():
@@ -254,6 +295,8 @@ if __name__ == "__main__":
     db_name = "rslims"
 
     """Setup logger"""
+
+
     def createLogHandler(log_file):
         logger = logging.getLogger(__name__)
         FORMAT = "[%(asctime)s->%(filename)s->%(funcName)s():%(lineno)s]%(levelname)s: %(message)s"
@@ -265,7 +308,7 @@ if __name__ == "__main__":
         return logger
 
 
-    job_name = 'OMERO_Import'
+    job_name = 'Images-Import-Scripts'
     logging_dest = os.path.join(os.getcwd(), "logs")
     date = datetime.now().strftime("%B-%d-%Y")
     logging_filename = logging_dest + "/" + f'{date}.log'

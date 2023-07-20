@@ -1,4 +1,4 @@
-#!/Users/chent/Desktop/KOMP_Project/OMERO_Import/.env/OMERO_IMPORT/bin/python3
+#!/Users/chent/Desktop/KOMP_Project/Images-Import-Scripts/.env/OMERO_IMPORT/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
