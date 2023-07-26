@@ -10,6 +10,7 @@ import mysql.connector
 import pandas as pd
 import time
 import openpyxl
+import slack_bot as bot
 
 
 class MonitorFolder(FileSystemEventHandler):
@@ -258,7 +259,7 @@ def insert_import_status_to_db(DIR_SENT_TO_DROPBOX: str) -> None:
         except mysql.connector.errors as e:
             print(e)
             logger.error(e)
-            #send_warning_message()
+            # send_warning_message()
 
     conn.commit()
     conn.close()
